@@ -29,32 +29,36 @@ ATransform& ATransform::operator = (const ATransform& orig)
 ATransform ATransform::Inverse() const
 {
 	// TODO: compute the inverse of a transform given the current rotation and translation components
-	return ATransform();
+	vec3 inv_mTrans = m_translation * -1;
+	mat3 inv_mRot = m_rotation.Transpose();
+	return ATransform(inv_mRot, inv_mTrans);
 }
 
 
 vec3 ATransform::RotTrans(const vec3& vecToTransform) const
 {
 	// TODO: Transform the input vector based on this transform's rotation and translation components
-	return vec3();
+	return vec3(m_rotation * vecToTransform + m_translation);
 }
 
 vec3 ATransform::Rotate(const vec3& vecToTransform) const
 {
 	// TODO: Transform the input direction based on this transform's rotation component
-	return vec3();
+	return vec3(m_rotation * vecToTransform);
 }
 
 vec3 ATransform::Translate(const vec3& vecToTransform) const
 {
 	// TODO: Transform the input vector based on this transform's translation component	
-	return vec3();
+	return vec3(vecToTransform + m_translation);
 }
 
 ATransform operator * (const ATransform& H1, const ATransform& H2)
 {
 	// TODO: implement the equivalent of multiplying  H1 and H2 transformation matrices and return the result
-	return ATransform();
+	vec3 comb_mTrans = H1.m_rotation * H2.m_translation + H1.m_translation;
+	mat3 comb_mRot = H1.m_rotation * H2.m_rotation;
+	return ATransform(comb_mRot, comb_mTrans);
 }
 
 vec3 operator * (const ATransform& A, const vec3& v)

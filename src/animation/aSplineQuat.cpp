@@ -114,7 +114,7 @@ void ASplineQuat::cacheCurve()
 void ASplineQuat::computeControlPoints(quat& startQuat, quat& endQuat)
 {
 	// startQuat is a phantom point at the left-most side of the spline
-	// endQuat is a phantom point at the left-most side of the spline
+	// endQuat is a phantom point at the right-most side of the spline
 
 	mCtrlPoints.clear();
 	int numKeys = mKeys.size();
@@ -130,6 +130,29 @@ void ASplineQuat::computeControlPoints(quat& startQuat, quat& endQuat)
 		//  for each cubic quaternion curve, then store the results in mCntrlPoints in same the same way 
 		//  as was used with the SplineVec implementation
 		//  Hint: use the SDouble, SBisect and Slerp to compute b1 and b2
+		if (segment == 0) {
+			q_1 = startQuat;
+			q0 = mKeys[segment].second;
+			q1 = mKeys[segment + 1].second;
+			q2 = mKeys[segment + 2].second;
+		}
+		else if (segment == numKeys - 2) {
+			q_1 = mKeys[segment - 1].second;
+			q0 = mKeys[segment].second;
+			q1 = mKeys[segment + 1].second;
+			q2 = endQuat;
+		}
+		else {
+			q_1 = mKeys[segment - 1].second;
+			q0 = mKeys[segment].second;
+			q1 = mKeys[segment + 1].second;
+			q2 = mKeys[segment + 2].second;
+		}
+
+		b0 = q0;
+		b1 = quat::Slerp(q0, quat::SBisect(quat::SDouble(q_1, q0), q1), 1 / 3);
+		b2 = quat::Slerp(q1, quat::SBisect(q0, quat::SDouble(q2, q1)), 1 / 3);
+		b3 = q1;
 
 
 		mCtrlPoints.push_back(b0);
@@ -147,6 +170,8 @@ quat ASplineQuat::getLinearValue(double t)
 
 	// TODO: student implementation goes here
 	// compute the value of a linear quaternion spline at the value of t using slerp
+
+	q = quat::Slerp(mKeys[segment].second, mKeys[segment + 1].second, t);
 
 	return q;	
 }
@@ -175,6 +200,11 @@ quat ASplineQuat::getCubicValue(double t)
 
 	// TODO: student implementation goes here
 	// compute the value of a cubic quaternion spline at the value of t using Scubic
+	b0 = mCtrlPoints[segment];
+	b1 = mCtrlPoints[segment + 1];
+	b2 = mCtrlPoints[segment + 2];
+	b3 = mCtrlPoints[segment + 3];
+	q = quat::Scubic(b0, b1, b2, b3, t);
 
 	return q;
 }
