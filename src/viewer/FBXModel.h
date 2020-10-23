@@ -11,6 +11,7 @@
 #include "aBVHController.h"
 #include "drawable.h"
 #include "utils.h"
+#include <memory>
 
 constexpr int MAXJOINTNUM = 6;
 struct FBXVertex

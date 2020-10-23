@@ -1,0 +1,24 @@
+﻿  Building Custom Rule C:/Users/shenz/Desktop/CIS562/hw-fkik-editor-negiqwq/CMakeLists.txt
+  aSplineVec3.cpp
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSplineVec3.cpp(126): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSplineVec3.cpp(158): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSplineVec3.cpp(171): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSplineVec3.cpp(207): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSplineVec3.cpp(208): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSplineVec3.cpp(225): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSplineVec3.cpp(252): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSplineVec3.cpp(288): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  aVector.cpp
+  aRotation.cpp
+  aSplineQuat.cpp
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSplineQuat.cpp(53): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSplineQuat.cpp(83): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSplineQuat.cpp(84): warning C4267: 'argument': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSplineQuat.cpp(94): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSplineQuat.cpp(120): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSplineQuat.cpp(184): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSplineQuat.cpp(216): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSplineQuat.cpp(268): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSplineQuat.cpp(292): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  curve.vcxproj -> C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\Release\curve.lib
