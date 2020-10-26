@@ -108,7 +108,7 @@ void AActor::updateGuideJoint(vec3 guideTargetPos)
 	// 3.	Set the global rotation of the guide joint towards the guideTarget
 	vec3 root_trans = m_pSkeleton->getRootNode()->getGlobalTranslation();
 	vec3 guide_trans = vec3(root_trans[0], 0, root_trans[2]);
-	m_Guide.setLocalTranslation(guide_trans);
+	m_Guide.setGlobalTranslation(guide_trans);
 
 	
 	vec3 rot_x_axis{ guideTargetPos[0] - guide_trans[0], 0, guideTargetPos[2] - guide_trans[2] };
@@ -128,7 +128,9 @@ void AActor::solveFootIK(float leftHeight, float rightHeight, bool rotateLeft, b
 	// The normal and the height given are in the world space
 
 	// 1.	Update the local translation of the root based on the left height and the right height
-	m_pSkeleton->getRootNode()->setLocalTranslation(vec3(0, std::min(leftHeight, rightHeight), 0));
+	vec3 root_pos = m_pSkeleton->getRootNode()->getLocalTranslation();
+	root_pos += vec3(0, std::min(leftHeight, rightHeight), 0);
+	m_pSkeleton->getRootNode()->setLocalTranslation(root_pos);
 	m_pSkeleton->update();
 
 	// 2.	Update the character with Limb-based IK 

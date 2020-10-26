@@ -1,2 +1,19 @@
-﻿  aActor.cpp
+﻿  Building Custom Rule C:/Users/shenz/Desktop/CIS562/hw-fkik-editor-negiqwq/CMakeLists.txt
+  aActor.cpp
+  aBVHController.cpp
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aBVHController.cpp(319): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aBVHController.cpp(329): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  aIKController.cpp
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aIKController.cpp(44): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  aJoint.cpp
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aJoint.cpp(82): warning C4267: 'return': conversion from 'size_t' to 'unsigned int', possible loss of data
+  aSkeleton.cpp
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSkeleton.cpp(82): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSkeleton.cpp(96): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSkeleton.cpp(158): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSkeleton.cpp(161): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aSkeleton.cpp(190): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  aTarget.cpp
+  aTransform.cpp
+  Generating Code...
   FKIK.vcxproj -> C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\Release\FKIK.lib
