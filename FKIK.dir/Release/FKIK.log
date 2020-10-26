@@ -1,3 +1,2 @@
-﻿  aIKController.cpp
-C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\src\animation\aIKController.cpp(44): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+﻿  aActor.cpp
   FKIK.vcxproj -> C:\Users\shenz\Desktop\CIS562\hw-fkik-editor-negiqwq\Release\FKIK.lib

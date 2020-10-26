@@ -9,6 +9,7 @@
 #include "aJoint.h"
 #include "aActor.h"
 #include <unordered_map>
+#include <experimental/filesystem>
 
 struct JointData
 {
